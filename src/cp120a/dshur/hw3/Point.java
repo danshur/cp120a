@@ -1,5 +1,27 @@
 package cp120a.dshur.hw3;
 
-public class Point {
+public class Point extends Shape{
+
+	public Point(double x, double y){
+		
+	}
+	
+	@Override
+	public double getArea() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getPerimeter() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public Rectangle getMinimumBoundingRectangle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
