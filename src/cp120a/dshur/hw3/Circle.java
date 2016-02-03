@@ -1,6 +1,7 @@
 package cp120a.dshur.hw3;
 
 public class Circle extends Shape{
+	private Point center;
 	
 	public Circle(Point center, double radius){
 		

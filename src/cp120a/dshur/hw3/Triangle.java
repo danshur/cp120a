@@ -2,8 +2,10 @@ package cp120a.dshur.hw3;
 
 public class Triangle extends Shape{
 
-	Triangle(Point p1, Point p2, Point p3){
-		
+	private Point p1, p2, p3; // points
+	
+	public Triangle(Point p1, Point p2, Point p3){
+		this.p1 = p1;
 	}
 
 	@Override
