@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Line extends Shape{
 
 	 Line(ArrayList<Point> coords){
-		 
+		 //loop
 	 }
 
 	@Override

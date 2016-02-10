@@ -1,15 +1,31 @@
 package cp120a.dshur.hw3;
 
-public class Point extends Shape{
-	
-	protected double x=0;
-	protected double y=0;
-	
-	public Point(double x, double y){
+public class Point extends Shape {
+
+	private double x;
+	private double y;
+
+	public double getX() {
+		return x;
+	}
+
+	public void setX(double x) {
 		this.x = x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public void setY(double y) {
 		this.y = y;
 	}
-	
+
+	public Point(double x, double y) {
+		this.setX(x);
+		this.setY(y);
+	}
+
 	@Override
 	public double getArea() {
 		// TODO Auto-generated method stub
