@@ -23,27 +23,28 @@ public class ShapeTest {
 		System.out.println("Rectangle test: " + "Width=" + r1.getWidth() + " Lenght=" + r1.getLenght() + " Area="
 				+ r1.getArea() + " Perimeter=" + r1.getPerimeter());
 
-		// square test
-		/*Point sp1 = new Point(10, 10);
-		Square s1 = new Square(sp1, 5); // Square(Point center, double
-										// sideLength)
-		System.out.println("Square test: " + "x=" + sp1.getX() + " and y=" + sp1.getY() + " Area=" + s1.getArea()
-				+ " Perimeter=" + s1.getPerimeter());*/
-		
-		//triangle test
+		// square test errors out
+		Point sp1 = new Point(10, 10);
+		Square s1 = new Square(sp1, 2.5); // Square(Point center, double
+											// sideLength)
+		System.out.println("Square test: " + "x=" + sp1.getX() + " and y=" + sp1.getY() + " Side=" + s1.getSideLength()
+				+ " Area=" + s1.getArea() + " Perimeter=" + s1.getPerimeter());
+
+		// triangle test
 		Point tp1 = new Point(1, 1);
 		Point tp2 = new Point(1, 10);
 		Point tp3 = new Point(5, 5);
 		Triangle t1 = new Triangle(tp1, tp2, tp3);
-		System.out.println("Triangle area=" + t1.getArea());
-		
-		//line test
+		System.out.println("Triangle area=" + t1.getArea() + " Perimeter=" + t1.getPerimeter());
+
+		// line test
 		ArrayList<Point> lp = new ArrayList<Point>();
 		lp.add(new Point(5, 5));
 		lp.add(new Point(15, 15));
 		lp.add(new Point(55, 25));
+		int i = 1;
 		for (Point p : lp) {
-		    System.out.println(p.getX() + "x" + p.getY());
+			System.out.println("Line point " + i++ + "=" + p.getX() + " and " + p.getY());
 		}
 	}
 

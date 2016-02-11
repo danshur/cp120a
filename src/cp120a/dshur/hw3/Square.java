@@ -1,25 +1,29 @@
 package cp120a.dshur.hw3;
 
-public class Square extends Rectangle{
-	private Point center;
+public class Square extends Rectangle {
+	// private Point center;
 	private double sideLength;
-	
-	
-// problem here trying to use point
-	public Square(Point center, double sideLength){
+
+	public double getSideLength() {
+		return sideLength;
+	}
+
+	// problem here trying to use point
+	public Square(Point center, double sideLength) {
+		// this.center = center;
 		this.sideLength = sideLength;
 	}
-	
+
 	@Override
 	public double getArea() {
-		// TODO Auto-generated method stub
-		return 0;
+		// return (lenght * width);
+		return sideLength * sideLength;
 	}
 
 	@Override
 	public double getPerimeter() {
 		// TODO Auto-generated method stub
-		return 0;
+		return sideLength * 4;
 	}
 
 	@Override

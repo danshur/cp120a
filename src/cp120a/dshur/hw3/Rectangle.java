@@ -7,7 +7,8 @@ public class Rectangle extends Shape {
 	private double ymax;
 	private double lenght;
 	private double width;
-	//private Point center;
+	// private Point center;
+	// private double sideLength;
 
 	public double getLenght() {
 		Rectangle.this.lenght = Rectangle.this.xmax - Rectangle.this.xmin;
@@ -19,13 +20,16 @@ public class Rectangle extends Shape {
 		return Rectangle.this.width;
 	}
 
-	
 	// setters for rectangle
 	public Rectangle(double xmin, double ymin, double xmax, double ymax) {
 		this.xmin = xmin;
 		this.xmax = xmax;
 		this.ymin = ymin;
 		this.ymax = ymax;
+	}
+
+	public Rectangle() {
+		super();
 	}
 
 	@Override
@@ -45,9 +49,7 @@ public class Rectangle extends Shape {
 	@Override
 	public Rectangle getMinimumBoundingRectangle() {
 		// TODO Auto-generated method stub
-		return null;
+		return Rectangle.this;
 	}
-
-	
 
 }
