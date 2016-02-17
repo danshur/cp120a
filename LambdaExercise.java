@@ -34,12 +34,12 @@ public class LambdaExercise {
 		        // lambda expression , reverse the name , then sort in ascending order
 		        // hint use  new StringBuilder(first).reverse().toString() to reverse the string
 		        System.out.println("Sorted in dictionary order of the reversed name (ascending)");
-		        //Arrays.sort(planets, new StringBuilder(a).reverse().toString(), (a), b) -> a.compareTo(b)) ;
+		        Arrays.sort(planets, (a, b) -> new StringBuilder(a).reverse().toString().compareTo(new StringBuilder(b).reverse().toString()) ) ;
 		        System.out.println(Arrays.toString(planets));
 
 		        // lambda expression , reverse the name , then sort in descending order
-		        //System.out.println("Sorted in dictionary order of the reversed name (descending)");
-		        //Arrays.sort(planets, ??);
-		        //System.out.println(Arrays.toString(planets));
+		        System.out.println("Sorted in dictionary order of the reversed name (descending)");
+		        Arrays.sort(planets, (a, b) -> new StringBuilder(b).reverse().toString().compareTo(new StringBuilder(a).reverse().toString()) );
+		        System.out.println(Arrays.toString(planets));
 		}
 }
