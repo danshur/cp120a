@@ -26,22 +26,27 @@ public class Triangle extends Shape {
 	@Override
 	public double getPerimeter() {
 		// Perimeter of triangle=(s1+s2+s3) s1=x,y
-		//side1 = Math.pow(Math.pow((side2x - side1x), 2) + Math.pow((side2y - side1y), 2) * .05, side1);
-		//double side1 = Math.pow(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2) * .05);
-		side1 = Math.sqrt(Math.pow((p2.getX() - p1.getX()), 2)+Math.pow((p2.getY() - p1.getY()), 2));
-		side2 = Math.sqrt(Math.pow((p3.getX() - p2.getX()), 2)+Math.pow((p3.getY() - p2.getY()), 2));
-		side3 = Math.sqrt(Math.pow((p1.getX() - p3.getX()), 2)+Math.pow((p1.getY() - p3.getY()), 2));
-		double perim = side1+side2+side3;
-		return round(perim); 
+		// side1 = Math.pow(Math.pow((side2x - side1x), 2) + Math.pow((side2y -
+		// side1y), 2) * .05, side1);
+		// double side1 = Math.pow(Math.pow((p2.getX() - p1.getX()), 2) +
+		// Math.pow((p2.getY() - p1.getY()), 2) * .05);
+		side1 = Math.sqrt(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2));
+		side2 = Math.sqrt(Math.pow((p3.getX() - p2.getX()), 2) + Math.pow((p3.getY() - p2.getY()), 2));
+		side3 = Math.sqrt(Math.pow((p1.getX() - p3.getX()), 2) + Math.pow((p1.getY() - p3.getY()), 2));
+		double perim = side1 + side2 + side3;
+		return round(perim);
 	}
-	public double round(double num){
+
+	public double round(double num) {
 		num = Math.round(num * 100);
-		return num = num/100;
-		
+		return num = num / 100;
+
 	}
+
 	@Override
 	public Rectangle getMinimumBoundingRectangle() {
-		// TODO Auto-generated method stub
+		double xmin,ymin,xmax,ymax;
+		//xmin=Math.min(this.pointA, b);
 		return null;
 	}
 }

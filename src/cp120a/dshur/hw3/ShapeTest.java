@@ -1,6 +1,9 @@
 package cp120a.dshur.hw3;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class ShapeTest {
 
@@ -36,16 +39,30 @@ public class ShapeTest {
 		Point tp3 = new Point(5, 5);
 		Triangle t1 = new Triangle(tp1, tp2, tp3);
 		System.out.println("Triangle area=" + t1.getArea() + " Perimeter=" + t1.getPerimeter() + " Min rect="
-				+ t1.getMinimumBoundingRectangle());
+				+ p1.getMinimumBoundingRectangle());
 
 		// line test
+		
 		ArrayList<Point> lp = new ArrayList<Point>();
 		lp.add(new Point(5, 5));
 		lp.add(new Point(15, 15));
 		lp.add(new Point(55, 25));
+		//Collections.sort(lp, (a, b) -> ((double) a).compare(b));
+		//lp.sort();
+		//Collections.sort(lp, lp); // (lp, (Point a, Point b) -> a.compareTo(b));
+		Collections.sort(lp, new Comparator<Point>() {
+			
+			@Override
+			public int compare(Point arg0, Point arg1) {
+				// TODO Auto-generated method stub
+			    return Double.compare(arg0.getX(), arg1.getX());
+			}
+		});
+		
 		int i = 1;
 		for (Point p : lp) {
-			System.out.println("Line point " + i++ + "=" + p.getX() + " and " + p.getY());
+			System.out.println("Line point " + i++ + "=" + p.getX() + " and " + p.getY()+ " Min rect="
+					+ p1.getMinimumBoundingRectangle());
 		}
 	}
 

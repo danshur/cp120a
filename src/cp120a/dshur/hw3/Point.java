@@ -41,7 +41,8 @@ public class Point extends Shape {
 	@Override
 	public Rectangle getMinimumBoundingRectangle() {
 		// TODO Auto-generated method stub
-		return new Rectangle();
+		return new Rectangle(x, y, x, y);
 	}
+	
 
 }

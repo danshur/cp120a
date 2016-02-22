@@ -2,16 +2,16 @@ package cp120a.dshur.hw3;
 
 public class Square extends Rectangle {
 	// private Point center;
-	private double sideLength;
-
-	public double getSideLength() {
-		return sideLength;
-	}
+	private double sideLength;	
 
 	// problem here trying to use point
 	public Square(Point center, double sideLength) {
-		// this.center = center;
+		super(center.getX() - sideLength / 2.0, center.getY() - sideLength / 2.0, center.getX() + sideLength / 2.0, center.getY() + sideLength / 2.0); 
 		this.sideLength = sideLength;
+	}
+	
+	public double getSideLength() {
+		return sideLength;
 	}
 
 	@Override

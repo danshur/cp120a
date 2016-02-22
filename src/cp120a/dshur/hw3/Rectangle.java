@@ -49,7 +49,7 @@ public class Rectangle extends Shape {
 	@Override
 	public Rectangle getMinimumBoundingRectangle() {
 		// TODO Auto-generated method stub
-		return Rectangle.this;
+		return Rectangle.this ;
 	}
 
 }
